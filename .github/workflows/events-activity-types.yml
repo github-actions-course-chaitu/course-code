@@ -1,4 +1,4 @@
-name: Repository Event Activity Types
+name: Repository Event Activity Types.
 
 on:
     # push:
