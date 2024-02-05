@@ -9,4 +9,7 @@ jobs:
             - run: |
                 echo $GITHUB_SHA
                 echo $GITHUB_REF
+                echo $GITHUB_BASE_REF
+                echo $GITHUB_HEAD_REF
+                echo $GITHUB_TARGET_REF
             - uses: actions/checkout@v3
