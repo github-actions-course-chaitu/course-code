@@ -16,7 +16,7 @@ jobs:
               working-directory: .github/workflows/
               run: |
                   docker --version
-                  docker build -t connect:7.4.0-0.0.1 . < ./Dockerfile
+                  docker build -t connect:7.4.0-0.0.1 .
                   docker images
                    
     # run-shell-commands-2:
