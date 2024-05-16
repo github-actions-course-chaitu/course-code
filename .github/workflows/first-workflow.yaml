@@ -15,8 +15,9 @@ jobs:
             - name: docker version
               run: |
                   docker --version
-                  docker build -t connect:7.4.0-0.0.1 . < .github/workflows/Dockerfile
+                  # docker build -t connect:7.4.0-0.0.1 . < .github/workflows/Dockerfile
                   docker images
+                  ls -la
                    
     # run-shell-commands-2:
     #     runs-on: ubuntu-latest
