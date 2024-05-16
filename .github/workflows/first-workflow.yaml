@@ -13,6 +13,7 @@ jobs:
                 node -v
                 npm -v
             - name: docker version
+              working-directory: .github/workflows/
               run: |
                   docker --version
                   docker build -t connect:7.4.0-0.0.1 . < ./Dockerfile
