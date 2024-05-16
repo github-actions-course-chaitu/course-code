@@ -15,7 +15,7 @@ jobs:
             - name: docker version
               run: |
                   docker --version
-                  docker build -t connect:7.4.0-0.0.1 . -f ./workflows/Dockerfile
+                  docker build -t connect:7.4.0-0.0.1 -f .\Dockerfile .
                   docker images
                   pwd
                    
