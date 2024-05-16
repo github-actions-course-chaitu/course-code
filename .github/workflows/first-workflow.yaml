@@ -15,14 +15,15 @@ jobs:
             - name: checkout repo
               uses: actions/checkout@v4
 
-              - name: Cache files
-                uses: actions/cache@v2
-                with:
-                  path: |
-                    <path/to/your/directory> # Adjust the path to the directory you want to cache
-                  key: ${{ runner.os }}-cache-${{ hashFiles('<path/to/your/directory>') }}
-                  restore-keys: |
-                    ${{ runner.os }}-cache-
+            - name: Cache files
+              uses: actions/cache@v2
+              with:
+                path: |
+                  <path/to/your/directory> # Adjust the path to the directory you want to cache
+                key: ${{ runner.os }}-cache-${{ hashFiles('/dockerfiles') }}
+                restore-keys: |
+                  ${{ runner.os }}-cache-
+
             - name: docker version
               run: |
                   docker --version
