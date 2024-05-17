@@ -18,9 +18,8 @@ jobs:
             - name: Cache files
               uses: actions/cache@v4
               with:
-                path: |
-                  **/dockerfiles/**  # Assuming your Dockerfile resides in a directory named "dockerfiles"
-                key: ${{ runner.os }}-cache-dockerfiles-${{ hashFiles('**/dockerfiles/**') }}
+                path: ~/dockerfiles
+                key: ${{ runner.os }}-cache-dockerfiles-${{ hashFiles('**/Dockerfile') }}
                 restore-keys: |
                   ${{ runner.os }}-cache-dockerfiles-
 
